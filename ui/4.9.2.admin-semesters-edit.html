@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin > Semesters [edit] - Workshop For Beginners</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+    <link rel="stylesheet" href="../assets/icons/bootstrap-icons.css" />
+  </head>
+  <body>
+    <header class="border-bottom sticky-top">
+      <nav class="navbar bg-light p-0">
+        <div class="container justify-content-between justify-sm-content-start">
+          <a class="navbar-brand" href="/ui/1.1.homepage.html">
+            <img
+              height="30"
+              src="../assets/img/workflow-logo-indigo-600-mark-gray-800-text.svg"
+              alt="Workshop For Beginners"
+            />
+          </a>
+          <!-- start: responsive menu -->
+          <button
+            class="navbar-toggler m-2 d-sm-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarMenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-start d-block d-sm-none"
+            id="navbarMenu"
+          >
+            <ul class="list-group">
+              <li class="list-group-item">เมนูผู้ดูแลระบบ (Admin)</li>
+              <li>
+                <a class="list-group-item" href="/ui/1.1.homepage.html"
+                  ><i class="bi-house"></i> หน้าหลัก (Home)</a
+                >
+              </li>
+              <li>
+                <a
+                  class="list-group-item active"
+                  href="/ui/4.9.1.admin-semesters.html"
+                  ><i class="bi-mortarboard"></i> ภาคการศึกษา (Semesters)</a
+                >
+              </li>
+              <li>
+                <a
+                  class="list-group-item "
+                  href="/ui/4.7.1.admin-levels.html"
+                  ><i class="bi-reception-4"></i> ระดับชั้น (Levels)</a
+                >
+              </li>
+              <li>
+                <a class="list-group-item" href="/ui/4.3.1.admin-colleges.html"
+                  ><i class="bi-bank"></i> รายชื่อสถานศึกษา (Colleges)</a
+                >
+              </li>
+              <li>
+                <a class="list-group-item" href="/ui/4.4.1.admin-majors.html"
+                  ><i class="bi-diagram-3"></i> สาขาวิชา (Majors)</a
+                >
+              </li>
+              <li>
+                <a class="list-group-item" href="/ui/4.5.1.admin-minors.html"
+                  ><i class="bi-diagram-3"></i> สาขางาน (Minors)</a
+                >
+              </li>
+              <li>
+                <a class="list-group-item" href="/ui/4.6.1.admin-groups.html"
+                  ><i class="bi-grid"></i> กลุ่ม (Groups)</a
+                >
+              </li>
+              <li>
+                <a class="list-group-item" href="/ui/4.2.1.admin-users.html"
+                  ><i class="bi-person-circle"></i> ผู้ใช้งาน (Users)</a
+                >
+              </li>
+              <li>
+                <a
+                  class="list-group-item"
+                  href="/ui/4.8.1.admin-userstudents.html"
+                  ><i class="bi-person-circle"></i> จัดการรายชื่อนักเรียน (User
+                  Students)</a
+                >
+              </li>
+              <li></li>
+              <li class="list-group-item">การตั้งค่า (Settings)</li>
+              <li>
+                <a class="list-group-item" href="/ui/3.2.settings-profile.html"
+                  ><i class="bi-pencil-square"></i> แก้ไขโปรไฟล์ (Edit
+                  Profile)</a
+                >
+              </li>
+              <li>
+                <a class="list-group-item" href="/ui/3.3.settings-password.html"
+                  ><i class="bi-lock"></i> เปลี่ยนรหัสผ่าน (Change Password)</a
+                >
+              </li>
+              <li>
+                <a
+                  class="list-group-item"
+                  href="/ui/3.4.settings-recentdevices.html"
+                  ><i class="bi-phone"></i> อุปกรณ์ที่เข้าใช้งาน (Recent
+                  Devices)</a
+                >
+              </li>
+              <li>
+                <a class="list-group-item" href="/auth/logout"
+                  ><i class="bi-power"></i> ออกจากระบบ (Sign out)</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- end: responsive menu -->
+          <div class="dropdown dropstart d-none d-sm-flex">
+            <a
+              href="#"
+              class="d-block link-dark text-decoration-none"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="../assets/img/profile.jpeg"
+                width="30"
+                height="30"
+                class="rounded-circle"
+              />
+              <span
+                class="position-absolute translate-middle rounded-circle profile-online"
+              ></span>
+            </a>
+            <ul class="dropdown-menu text-small">
+              <li>
+                <a class="dropdown-item" href="/ui/3.1.profile.html"
+                  ><i class="bi-person-circle"></i> Aodto Admin</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="/ui/3.2.settings-profile.html"
+                  ><i class="bi-pencil-square"></i> Edit Profile</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="/ui/3.3.settings-password.html"
+                  ><i class="bi-lock"></i> Change Password</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="/ui/3.4.settings-recentdevices.html"
+                  class="nav-link"
+                  ><i class="bi-phone"></i> Recent Devices</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="/auth/logout"
+                  ><i class="bi-power"></i> Sign out</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <!-- start: left menu -->
+          <div class="col-lg-3">
+            <div class="card mb-3 mt-3 d-none d-sm-flex">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" href="/ui/4.1.admin.html">
+                    <i class="bi-house"></i> หน้าหลัก (Home)
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/ui/4.9.1.admin-semesters.html">
+                    <i class="bi-mortarboard"></i> ภาคการศึกษา (Semesters)
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="/ui/4.7.1.admin-levels.html">
+                    <i class="bi-reception-4"></i> ระดับชั้น (Levels)
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/ui/4.3.1.admin-colleges.html">
+                    <i class="bi-bank"></i> รายชื่อสถานศึกษา (Colleges)
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/ui/4.4.1.admin-majors.html">
+                    <i class="bi-diagram-3"></i> สาขาวิชา (Majors)
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/ui/4.5.1.admin-minors.html">
+                    <i class="bi-diagram-3"></i> สาขางาน (Minors)
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/ui/4.6.1.admin-groups.html">
+                    <i class="bi-grid"></i> กลุ่ม (Groups)
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/ui/4.2.1.admin-users.html">
+                    <i class="bi-person"></i> ผู้ใช้งาน (Users)
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/ui/4.8.1.admin-userstudents.html">
+                    <i class="bi-person"></i> จัดการรายชื่อนักเรียน <br />(User
+                    Students)
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- end: left menu -->
+          <!-- start: main content -->
+          <div class="col-lg-9">
+            <form
+              id="adminForm"
+              class="needs-validation"
+              action="/ui/4.9.1.admin-semesters.html"
+              novalidate
+            >
+              <!-- start: breadcrumb -->
+              <div class="page-header mt-3">
+                <div class="d-flex justify-content-between">
+                  <h1>จัดการภาคการศึกษา[แก้ไข]</h1>
+                  <div class="align-self-end">
+                    <a
+                      class="btn btn-outline-secondary align-self-end mb-2"
+                      href="/ui/4.9.1.admin-semesters.html"
+                    >
+                      <i class="bi-x me-1"></i> ยกเลิก
+                    </a>
+                    <button class="btn btn-primary mb-2" type="submit">
+                      <i class="bi-save me-1"></i> บันทึกข้อมูล
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- end: breadcrumb -->
+              <!-- START: MAIN CONTENT BODY -->
+              <div class="card mb-5">
+                <div class="card-body">
+                  <div class="row mb-4">
+                    <label
+                      for="semesterNameLabel"
+                      class="col-sm-3 col-form-label form-label"
+                      >ภาคการศึกษา</label
+                    >
+                    <div class="col-sm-9">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="semesterName"
+                        id="semesterNameLabel"
+                        value="ภาคการศึกษาที่ 1/2565"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div id="gender" class="row mb-4">
+                    <label class="col-sm-3 col-form-label form-label"
+                      >สถานะ</label
+                    >
+                    <div class="col-sm-9">
+                      <div class="input-group input-group-sm-vertical">
+                        <label class="form-control text-success" for="status1">
+                          <span class="form-check">
+                            <input
+                              type="radio"
+                              class="form-check-input"
+                              name="status"
+                              id="status1"
+                              checked=""
+                              value="1"
+                            />
+                            <span class="form-check-label"
+                              ><i class="bi-check"></i> เผยแพร่</span
+                            >
+                          </span>
+                        </label>
+
+                        <label class="form-control text-danger" for="status2">
+                          <span class="form-check">
+                            <input
+                              type="radio"
+                              class="form-check-input"
+                              name="status"
+                              id="status2"
+                              value="0"
+                            />
+                            <span class="form-check-label"
+                              ><i class="bi-x"></i> ไม่เผยแพร่</span
+                            >
+                          </span>
+                        </label>
+
+                        <label
+                          class="form-control text-secondary"
+                          for="status3"
+                        >
+                          <span class="form-check">
+                            <input
+                              type="radio"
+                              class="form-check-input"
+                              name="status"
+                              id="status3"
+                              value="-1"
+                            />
+                            <span class="form-check-label"
+                              ><i class="bi-trash"></i> อยู่ในถังขยะ</span
+                            >
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END: MAIN CONTENT BODY -->
+              <input type="hidden" name="id" value="1" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
