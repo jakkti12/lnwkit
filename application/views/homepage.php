@@ -41,11 +41,11 @@
             </div>
 
             <div class="row text-center">
-                <div class="col-md-2 left">
+                <div class="col-md-6">
                     <img class="bear" src="/assets/img/b7.jpg" width="170px" alt=""><br>
                     <p class="font-bear">Wish Bear</p> 
                 </div>
-                <div class="col-md-2 right">
+                <div class="col-md-6">
                     <img class="bear" src="/assets/img/b8.jpg" width="170px" alt=""><br>
                     <p class="font-bear">Grumpy Bear</p> 
                 </div>
