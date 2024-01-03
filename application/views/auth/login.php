@@ -12,15 +12,11 @@
         <div class="col">
           <div class="p-2">
             <img
-              style="width: 50px"
-              src="<?php echo base_url()?>../assets/img/workflow-mark-indigo-600.svg"
+              style="width: 200px; border-radius: 10px;"
+              src="../../../assets/img/logo.jpg"
             />
           </div>
           <h2>Sign in to your account</h2>
-          <p>
-            Or
-            <a href="<?php echo base_url()?>/auth/register" class=""> create new account </a>
-          </p>
         </div>
       </div>
       <div class="row mt-5 justify-content-center">
@@ -38,7 +34,9 @@
                     class="form-control"
                     id="inputEmail"
                     aria-describedby="emailHelp"
+                    value="<?php echo set_value('email') ?>"
                   />
+                  <a style="color:#FF0000;"><?php echo form_error('email') ?></a>
                 </div>
                 <div class="mb-3">
                   <label for="inputPassword" class="form-label">Password</label>
@@ -47,7 +45,9 @@
                     name="password"
                     class="form-control"
                     id="inputPassword"
+                    value="<?php echo set_value('password') ?>"
                   />
+                  <a style="color:#FF0000;"><?php echo form_error('password') ?></a>
                 </div>
                 <div class="d-flex w-100 justify-content-between mb-3">
                   <div class="form-check">

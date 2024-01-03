@@ -12,19 +12,15 @@ class Auth extends CI_Controller {
             redirect(site_url() . 'auth/login');
         }
         
-        if (empty($data['role'])) {
-            redirect(site_url() . 'auth/login');
-        }
-        
         //เช็คว่า user อยู่ในระดับไหน
-        $dataLevel = $this->userlevel->checkLevel($data['role']);
         
         if (empty($this->session->userdata['email'])) {
             redirect(site_url() . 'auth/login');
         }
         //ถ้ามีข้อมูลแล้วให้ไปยังหน้าหลัก
         else {
-            redirect(site_url() . '',$dataLevel);
+            $this->load->view('navbar');
+            $this->load->view('homepage');
         }
     }
     
