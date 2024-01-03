@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sign in - Workshop For Beginners</title>
-    <link href="<?php echo base_url("assets/css/bootstrap.min.css");?>" rel="stylesheet" />
+    <link href="<?php echo base_url()?>../assets/css/bootstrap.min.css" rel="stylesheet" />
   </head>
   <body>
     <div class="container">
@@ -13,13 +13,13 @@
           <div class="p-2">
             <img
               style="width: 50px"
-              src="<?php echo base_url("assets/img/workflow-mark-indigo-600.svg")?>"
+              src="<?php echo base_url()?>../assets/img/workflow-mark-indigo-600.svg"
             />
           </div>
           <h2>Sign in to your account</h2>
           <p>
             Or
-            <a href="<?php echo base_url(auth/register)?>" class=""> create new account </a>
+            <a href="<?php echo base_url()?>/auth/register" class=""> create new account </a>
           </p>
         </div>
       </div>
@@ -27,13 +27,14 @@
         <div class="col-md-8 col-lg-6">
           <div class="card">
             <div class="card-body">
-              <form>
+              <form action="login" method="post">
                 <div class="mb-3">
                   <label for="inputEmail" class="form-label"
                     >Email address</label
                   >
                   <input
                     type="email"
+                    name="email"
                     class="form-control"
                     id="inputEmail"
                     aria-describedby="emailHelp"
@@ -43,6 +44,7 @@
                   <label for="inputPassword" class="form-label">Password</label>
                   <input
                     type="password"
+                    name="password"
                     class="form-control"
                     id="inputPassword"
                   />
@@ -59,7 +61,7 @@
                     >
                   </div>
                   <div>
-                    <a href="<?php echo base_url()?>" class="link-primary">Forgot your password?</a>
+                    <a href="<?php echo base_url()?>/" class="link-primary">Forgot your password?</a>
                   </div>
                 </div>
 
@@ -69,13 +71,13 @@
               </form>
               <hr />
               <div class="text-center">
-                <a href="<?php echo base_url()?>" class="link-secondary">Go back to homepage</a>
+                <a href="<?php echo base_url()?>/" class="link-secondary">Go back to homepage</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="<?php echo base_url(assets/js/bootstrap.bundle.min.js)?>"></script>
+    <script src="<?php echo base_url()?>../assets/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
