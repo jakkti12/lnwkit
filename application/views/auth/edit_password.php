@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Settings > Change Password - Workshop For Beginners</title>
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/custom.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
@@ -51,7 +50,7 @@
                 <li class="nav-item">
                   <a
                     class="nav-link active"
-                    href="/ui/3.3.settings-password.html"
+                    href="<?php echo base_url('edit_password');?>"
                   >
                     <i class="bi-key"></i> Password
                   </a>
@@ -78,11 +77,7 @@
                 <h4 class="card-title">Change your password</h4>
               </div>
               <div class="card-body">
-                <form
-                  id="changePasswordForm"
-                  class="needs-validation"
-                  novalidate
-                >
+                <form action="edit_password" method="post" >
                   <div class="row mb-4">
                     <div class="col-sm-3">
                       <label for="currentPasswordLabel" class="form-label"
@@ -93,7 +88,7 @@
                       <input
                         type="password"
                         class="form-control"
-                        name="currentPassword"
+                        name="password"
                         id="currentPasswordLabel"
                         placeholder="Enter current password"
                         required
@@ -113,7 +108,7 @@
                       <input
                         type="password"
                         class="form-control"
-                        name="newPassword"
+                        name="newpassword"
                         id="newPassword"
                         placeholder="Enter new password"
                         required
@@ -134,7 +129,7 @@
                         <input
                           type="password"
                           class="form-control"
-                          name="confirmNewPassword"
+                          name="confnewpassword"
                           id="confirmNewPasswordLabel"
                           placeholder="Confirm your new password"
                           required
@@ -150,7 +145,7 @@
 
                       <ul class="fs-6">
                         <li>
-                          Minimum 8 characters long - the more, the better
+                          Minimum 5 characters long - the more, the better
                         </li>
                         <li>At least one lowercase character</li>
                         <li>At least one uppercase character</li>
