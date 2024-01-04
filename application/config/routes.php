@@ -53,5 +53,8 @@ $route['default_controller'] = 'auth';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+//edit password start
 $route['edit_profile'] = 'Editpassword/profile' ;
 $route['edit_password'] = 'Editpassword/edit' ;
+$route['edit_success'] = 'Editpassword/editpass_success';
+//edit password end

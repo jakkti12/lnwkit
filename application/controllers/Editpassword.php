@@ -51,8 +51,19 @@ class Editpassword extends CI_Controller
 
             $this->editpass_model->updatepassword($cleanPost);
 
-            redirect(site_url() . '');
+            if($cleanPost == true)
+            {
+                echo 'nooo';
+            } else {
+                echo 'yesssss';
+            }
+            
             
         }
+    }
+    
+    public function editpass_success()
+    {
+        $this->load->view('auth/edit_passwordsuccess');
     }
 }
