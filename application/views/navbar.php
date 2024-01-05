@@ -36,25 +36,25 @@
 
           <?php if (empty($this->session->userdata['email'])) { ?>
 
-            <li class="nav-item">
-              <a href="<?php echo base_url('logout') ?>"><button type="submit" class="btn btn-danger">Log Out</button></a>
-            </li>
+            <div style="margin-left:auto;">
+              <div class="font nav-item">
+                <li class="nav-item">
+                  <a class="nav-link active text-light font20 login" aria-current="page" href="<?php echo base_url('auth/login') ?>">Login</a>
+                </li>
+              </div>
+            </div>
+            <div>
+              <li class="nav-item">
+                <a class="nav-link active text-light font20 register" aria-current="page" href="<?php echo base_url('auth/register') ?>">Register</a>
+              </li>
+            </div>
+            <div style="width: 40px;"></div>
 
           <?php } else { ?>
 
-            <div style="margin-left:auto;">
-                        <div class="font nav-item">
-                            <li class="nav-item">
-                                <a class="nav-link active text-light font20 login" aria-current="page" href="<?php echo base_url('auth/login') ?>">Login</a>
-                            </li>
-                        </div>
-                    </div>
-                    <div>
-                        <li class="nav-item">
-                            <a class="nav-link active text-light font20 register" aria-current="page" href="<?php echo base_url('auth/register') ?>">Register</a>
-                        </li>
-                    </div>
-                    <div style="width: 40px;"></div>
+            <li class="nav-item">
+              <a href="<?php echo base_url('logout') ?>"><button type="submit" class="btn btn-danger">Log Out</button></a>
+            </li>
 
           <?php } ?>
 
