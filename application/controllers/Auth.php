@@ -32,8 +32,10 @@ class Auth extends CI_Controller
                 $post = $this->input->post(NULL, TRUE);
                 $cleanPost = $this->security->xss_clean($post);
                 $hashed = $this->password->create_hash($cleanPost['password']);
+                
                 $cleanPost['email'] = $this->input->post('email');
                 $cleanPost['role'] = '4';
+                $cleanPost['status'] = '1';
                 $cleanPost['firstname'] = $this->input->post('firstname');
 				$cleanPost['lastname'] = $this->input->post('lastname');
                 $cleanPost['banned_users'] = 'unban';

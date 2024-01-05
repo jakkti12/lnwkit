@@ -11,6 +11,8 @@ class Register_model extends CI_Model
             'lastname' => $d['lastname'],
             'email' => $d['email'],
             'password' => $d['password'],
+            'role' => $d['role'],
+            'status' => $d['status'],
             'banned_users' => $d['banned_users']
         );
         $q = $this->db->insert_string('users', $string);
