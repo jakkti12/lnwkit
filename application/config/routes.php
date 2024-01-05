@@ -57,4 +57,5 @@ $route['translate_uri_dashes'] = FALSE;
 $route['edit_profile'] = 'Editpassword/profile' ;
 $route['edit_password'] = 'Editpassword/edit' ;
 $route['edit_success'] = 'Editpassword/editpass_success';
+$route['edit_unsuccess'] = 'Editpassword/editpass_unsuccess';
 //edit password end

@@ -69,69 +69,69 @@
             </div>
             <div class="card-body">
 
-            <?php echo form_open('edit_password'); ?>
-                <div class="row mb-4">
-                  <div class="col-sm-3">
-                    <label for="currentPasswordLabel" class="form-label">Current password</label>
+              <?php echo form_open('edit_password'); ?>
+              <div class="row mb-4">
+                <div class="col-sm-3">
+                  <label for="currentPasswordLabel" class="form-label">Current password</label>
+                </div>
+                <div class="col-sm-9">
+                  <input value="<?php echo set_value('oldpassword') ?>" type="password" class="form-control" name="oldpassword" id="currentPasswordLabel" placeholder="Enter current password" required />
+                  <a style="color:#FF0000;"><?php echo form_error('oldpassword') ?></a>
+                  <div class="invalid-feedback">
+                    Please enter current password
                   </div>
-                  <div class="col-sm-9">
-                    <input value="<?php echo set_value('oldpassword') ?>" type="password" class="form-control" name="oldpassword" id="currentPasswordLabel" placeholder="Enter current password" required />
-                    <a style="color:#FF0000;"><?php echo form_error('oldpassword') ?></a>
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-sm-3">
+                  <label for="newPassword" class="form-label">New password</label>
+                </div>
+                <div class="col-sm-9">
+                  <input value="<?php echo set_value('newpassword') ?>" type="password" class="form-control" name="newpassword" id="newPassword" placeholder="Enter new password" required />
+                  <a style="color:#FF0000;"><?php echo form_error('newpassword') ?></a>
+                  <div class="invalid-feedback">
+                    Please enter new password
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-sm-3">
+                  <label for="confirmNewPasswordLabel" class="form-label">Confirm new password</label>
+                </div>
+                <div class="col-sm-9">
+                  <div class="mb-3">
+                    <input value="<?php echo set_value('confnewpassword') ?>" type="password" class="form-control" name="confnewpassword" id="confirmNewPasswordLabel" placeholder="Confirm your new password" required />
+                    <a style="color:#FF0000;"><?php echo form_error('confnewpassword') ?></a>
                     <div class="invalid-feedback">
-                      Please enter current password
+                      Please enter confirm new password
                     </div>
                   </div>
-                </div>
-                <div class="row mb-4">
-                  <div class="col-sm-3">
-                    <label for="newPassword" class="form-label">New password</label>
-                  </div>
-                  <div class="col-sm-9">
-                    <input value="<?php echo set_value('newpassword') ?>" type="password" class="form-control" name="newpassword" id="newPassword" placeholder="Enter new password" required />
-                    <a style="color:#FF0000;"><?php echo form_error('password') ?></a>
-                    <div class="invalid-feedback">
-                      Please enter new password
-                    </div>
-                  </div>
-                </div>
-                <div class="row mb-4">
-                  <div class="col-sm-3">
-                    <label for="confirmNewPasswordLabel" class="form-label">Confirm new password</label>
-                  </div>
-                  <div class="col-sm-9">
-                    <div class="mb-3">
-                      <input value="<?php echo set_value('confnewpassword') ?>" type="password" class="form-control" name="confnewpassword" id="confirmNewPasswordLabel" placeholder="Confirm your new password" required />
-                      <a style="color:#FF0000;"><?php echo form_error('confpassword') ?></a>
-                      <div class="invalid-feedback">
-                        Please enter confirm new password
-                      </div>
-                    </div>
-                    <h5>Password requirements:</h5>
-                    <p class="fs-6 mb-2">
-                      Ensure that these requirements are met:
-                    </p>
+                  <h5>Password requirements:</h5>
+                  <p class="fs-6 mb-2">
+                    Ensure that these requirements are met:
+                  </p>
 
-                    <ul class="fs-6">
-                      <li>
-                        Minimum 5 characters long - the more, the better
-                      </li>
-                      <li>At least one lowercase character</li>
-                      <li>At least one uppercase character</li>
-                      <li>
-                        At least one number, symbol, or whitespace character
-                      </li>
-                    </ul>
-                  </div>
+                  <ul class="fs-6">
+                    <li>
+                      Minimum 5 characters long - the more, the better
+                    </li>
+                    <li>At least one lowercase character</li>
+                    <li>At least one uppercase character</li>
+                    <li>
+                      At least one number, symbol, or whitespace character
+                    </li>
+                  </ul>
                 </div>
+              </div>
 
-                <div class="row mb-4">
-                  <div class="col-sm-3"></div>
-                  <div class="col-sm-9">
-                    <button type="submit" class="btn btn-primary">
-                      Save Changes
-                    </button>
-                  </div>
+              <div class="row mb-4">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-9">
+                  <button type="submit" class="btn btn-primary">
+                    Save Changes
+                  </button>
                 </div>
+              </div>
             </div>
           </div>
         </div>
