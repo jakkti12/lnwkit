@@ -1,18 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Auth extends CI_Controller {
-
+class Auth extends CI_Controller 
+{
     public function index()
     {
-        $data = $this->session->userdata;
-        
+        $data = $this->session->userdata();
         //เช็คว่าใน data มีข้อมูลหรือไม่ ถ้าไม่มีให้ไปยังหน้า login
         if (empty($data)) {
             redirect(site_url() . 'auth/login');
         }
-        
-        //เช็คว่า user อยู่ในระดับไหน
         
         if (empty($this->session->userdata['email'])) {
             redirect(site_url() . 'auth/login');

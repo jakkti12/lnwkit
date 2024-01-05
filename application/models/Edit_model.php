@@ -1,36 +1,19 @@
 <?php
-class Editprofile_model extends CI_Model
-{
-    public function updateprofile($post)
+class Edit_model extends CI_Model {
+ 
+    public function __construct()
     {
-        $this->db->where('id', $post['user_id']);
-                $this->db->update('users', array('firstname' => $post['firstname'] , 'lastname' => $post['lastname']));
-                $success = $this->db->affected_rows();
-        return true;
+        $this->load->database();
     }
-
-    public function getAllSettings()
+    
+    public function record_count()
     {
-        $this->db->select('*');
-        $this->db->from('settings');
-        return $this->db->get()->row();
+        return $this->db->count_all('users');
     }
-
-    public function getUserInfo($id)
+        
+    public function get_news_by_id($id = 0)
     {
-        $q = $this->db->get_where('users', array('id' => $id), 1);
-        if ($this->db->affected_rows() > 0) {
-            $row = $q->row();
-            return $row;
-        } else {
-            error_log('no user found getUserInfo(' . $id . ')');
-            return false;
-        }
-    }
-
-    public function get_news_by_id($id)
-    {
-        if ($id == 0)
+        if ($id === 0)
         {
             $query = $this->db->get('users');
             return $query->result_array();
@@ -39,12 +22,12 @@ class Editprofile_model extends CI_Model
         $query = $this->db->get_where('users', array('id' => $id));
         return $query->row_array();
     }
-
+    
     public function set_news($id = 0)
     {
         $this->load->helper('url');
  
-        $slug = url_title($this->input->post('title'), 'dash', TRUE);
+        $slug = url_title($this->input->post('firstname'), 'dash', TRUE);
  
         $data = array(
             'title' => $this->input->post('title'), // $this->db->escape($this->input->post('title'))

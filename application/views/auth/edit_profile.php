@@ -27,12 +27,7 @@
                 </li>
               </ol>
             </nav>
-            <h1 class="page-header-title">Basic information</h1>
-          </div>
-          <div class="col-sm-auto">
-            <a class="btn btn-primary" href="/ui/3.1.profile.html">
-              <i class="bi-person-fill me-1"></i> My profile
-            </a>
+            <h1 class="page-header-title">Information</h1>
           </div>
         </div>
       </div>
@@ -40,22 +35,17 @@
 
       <div class="row">
         <!-- start: left menu -->
-        <div class="col-lg-3">
+        <div class="col-lg-3 mt-4">
           <div class="card mb-3">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link active" href="/ui/3.2.settings-profile.html">
+                <a class="nav-link active" href="<?php echo base_url('edit_profile') ?>">
                   <i class="bi-person"></i> Basic information
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/ui/3.3.settings-password.html">
+                <a class="nav-link" href="<?php echo base_url('edit_password') ?>">
                   <i class="bi-key"></i> Password
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/ui/3.4.settings-recentdevices.html">
-                  <i class="bi-phone"></i> Recent devices
                 </a>
               </li>
             </ul>
@@ -64,10 +54,10 @@
         <!-- end: left menu -->
 
         <!-- start: main content -->
-        <div class="col-lg-9">
+        <div class="col-lg-9 mt-4">
           <div class="card mb-5">
             <div class="card-header">
-              <h2 class="card-title h4">Basic information</h2>
+              <h2 class="card-title h4">My Profile</h2>
             </div>
 
             <form action="edit_profile" method="post">
@@ -75,19 +65,19 @@
                 <div class="row mb-3">
                   <div class="col-xs-12 col-sm-6">
                     <label for="inputFirstname" class="form-label">Firstname</label>
-                    <input type="text" name="firstname" class="form-control" id="inputFirstname" aria-describedby="emailHelp" value="<?php echo $row['fristname']; ?>" />
+                    <input type="text" name="firstname" class="form-control" id="inputFirstname" aria-describedby="emailHelp" value="<?php echo $news_item['firstname']; ?>" />
                   </div>
                   <div class="col-xs-12 col-sm-6">
                     <label for="inputLastname" class="form-label">Surename</label>
-                    <input type="text" name="lastname" class="form-control" id="inputLastname" value="<?php echo $lastname ?>" />
+                    <input type="text" name="lastname" class="form-control" id="inputLastname" value="<?php echo $news_item['lastname']; ?>" />
                   </div>
                 </div>
                 <div class="mb-3">
                   <label for="inputEmail" class="form-label">Email address</label>
-                  <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" value="<?php echo $email ?>" />
+                  <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" value="<?php echo $email ?>" disabled/>
                 </div>
 
-                <button type="submit" class="btn btn-danger w-30 mt-3 " style="margin-left: 650px;">
+                <button type="submit" class="btn btn-primary w-30 mt-3 " style="margin-left: 650px;">
                   SAVE CHANG
                 </button>
               </div>

@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="<?php echo base_url('') ?>">
             CARE BEARS
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
