@@ -53,10 +53,14 @@ $route['default_controller'] = 'homepage';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['auth/login'] = 'auth_register/login';
+$route['auth/login'] = 'auth_login/login';
+
+
 $route['auth/register'] = 'auth_register/register';
+$route['auth/completed'] = 'auth_register/completed';
 
 $route['edit_profile'] = 'edit_profile/profile';
+$route['edit_profile_success'] = 'edit_profile/editpro_success';
 
 $route['logout'] = 'auth_login/logout';
 
