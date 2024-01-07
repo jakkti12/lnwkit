@@ -19,7 +19,7 @@ class Edit_profile extends CI_Controller
     public function profile()
     {
         $data = $this->session->userdata;
-        if (!$this->session->userdata) {
+        if ($this->session->userdata) {
             redirect(site_url() . 'auth/login');
         } else {
 
