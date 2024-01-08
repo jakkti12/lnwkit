@@ -18,12 +18,12 @@ class Edit_profile extends CI_Controller
 
     public function profile()
     {
-        $data = $this->session->userdata;
-        if ($this->session->userdata) {
+        if (empty($this->session->userdata['email'])) {
             redirect(site_url() . 'auth/login');
         } else {
 
             // $id = $this->uri->segment(3);
+            $data = $this->session->userdata;
             $dataInfo = array(
                 'id' => $data['id']
             );

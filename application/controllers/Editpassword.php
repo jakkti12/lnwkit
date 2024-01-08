@@ -15,11 +15,11 @@ class Editpassword extends CI_Controller
 
     public function edit()
     {
-        $data = $this->session->userdata;
-        if ($this->session->userdata) {
+        if (empty($this->session->userdata['email'])) {
             redirect(site_url() . 'auth/login');
         } else {
-           
+        
+        $data = $this->session->userdata;
         $this->load->model('editpass_model');
 
         $dataInfo = array(
